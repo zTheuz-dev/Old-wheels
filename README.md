@@ -18,9 +18,13 @@ main
 Cada integrante deve criar sua própria branch:
 
 ```bash
-frontend-matheus
-backend-joao
-design-maria
+front-Wessler
+front-Semmer
+front-Aguiar
+front-Agapito
+
+
+
 ```
 
 ---
