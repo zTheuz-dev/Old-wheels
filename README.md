@@ -36,7 +36,7 @@ front-Agapito
 Baixar o projeto do GitHub para o computador:
 
 ```bash
-git clone LINK_DO_REPOSITORIO
+git clone https://github.com/zTheuz-dev/Old-wheels
 ```
 
 ---
@@ -44,7 +44,7 @@ git clone LINK_DO_REPOSITORIO
 ## 2️⃣ Entrar na pasta do projeto
 
 ```bash
-cd nome-do-projeto
+cd Old-wheels
 ```
 
 ---
