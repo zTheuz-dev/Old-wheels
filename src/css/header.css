@@ -1,0 +1,88 @@
+/* HEADER */
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(11, 13, 16, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.logo-mark{
+    width: 2.8rem;
+    height: 2.8rem;
+    display: grid;
+    place-items: center;
+    border-radius: 0.9rem;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #111;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    box-shadow: 0 12px 28px rgba(255, 212, 59, 0.22);
+}
+
+.logo-text{
+    display: grid;
+    gap: 0.1rem;
+}
+
+.logo-text strong{
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+}
+
+.logo-text small{
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav a{
+    position: relative;
+    color: var(--muted);
+    font-weight: 700;
+    padding: 0.35rem 0;
+    transition: color 0.25s ease;
+}
+
+.nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.25s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible{
+    color: var(--text);
+}
+
+.nav a:hover::after,
+.nav a:focus-visible::after{
+    width: 100%;
+}
