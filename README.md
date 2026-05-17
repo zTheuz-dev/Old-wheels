@@ -1,42 +1,38 @@
-````md
 # Git e GitHub — Fluxo de Trabalho da Equipe
 
 ## 📌 Objetivo
+
 Organizar o desenvolvimento do projeto para que cada integrante consiga trabalhar separadamente sem alterar o código dos outros integrantes.
 
 ---
 
 # 🌿 O que é uma Branch?
 
-Uma branch é uma “cópia” do projeto principal onde cada integrante pode desenvolver sua parte separadamente.
+Uma branch é uma “cópia” do projeto principal onde cada integrante desenvolve sua parte separadamente.
 
 A branch principal do projeto normalmente é:
+
 ```bash
 main
-````
+```
 
-Cada integrante deve criar sua própria branch:
+Cada integrante utiliza sua própria branch:
 
 ```bash
 front-Wessler
 front-Semmer
 front-Aguiar
 front-Agapito
-
-
-
 ```
 
 ---
 
-# 🔄 Fluxo de Trabalho
+# 🚀 Primeira Configuração (Primeiro Uso)
 
 ## 1️⃣ Clonar o repositório
 
-Baixar o projeto do GitHub para o computador:
-
 ```bash
-git clone https://github.com/zTheuz-dev/Old-wheels
+git clone https://github.com/zTheuz-dev/Old-wheels.git
 ```
 
 ---
@@ -49,35 +45,57 @@ cd Old-wheels
 
 ---
 
-## 3️⃣ Atualizar o projeto
-
-Sempre atualizar antes de começar:
+## 3️⃣ Verificar branches disponíveis
 
 ```bash
-git pull
-```
-
-Isso baixa as alterações mais recentes feitas pela equipe.
-
----
-
-## 4️⃣ Criar sua branch
-
-```bash
-git checkout -b nome-da-branch
-```
-
-Exemplo:
-
-```bash
-git checkout -b frontend-matheus
+git branch -a
 ```
 
 ---
 
-## 5️⃣ Fazer alterações
+## 4️⃣ Conectar na sua branch
 
 Exemplo:
+
+```bash
+git checkout -b front-Aguiar origin/front-Aguiar
+```
+
+Isso conecta sua máquina com sua branch do GitHub.
+
+---
+
+# 🔄 Fluxo do Dia a Dia
+
+## 1️⃣ Entrar na pasta do projeto
+
+```bash
+cd Old-wheels
+```
+
+---
+
+## 2️⃣ Ir para sua branch
+
+```bash
+git checkout front-Aguiar
+```
+
+---
+
+## 3️⃣ Atualizar sua branch
+
+```bash
+git pull origin front-Aguiar
+```
+
+Isso baixa as alterações mais recentes da sua branch.
+
+---
+
+## 4️⃣ Fazer alterações
+
+Exemplos:
 
 * criar páginas;
 * editar CSS;
@@ -86,27 +104,23 @@ Exemplo:
 
 ---
 
-## 6️⃣ Verificar alterações
+## 5️⃣ Verificar alterações
 
 ```bash
 git status
 ```
 
-Mostra os arquivos modificados.
-
 ---
 
-## 7️⃣ Adicionar alterações
+## 6️⃣ Adicionar alterações
 
 ```bash
 git add .
 ```
 
-Adiciona todos os arquivos alterados.
-
 ---
 
-## 8️⃣ Salvar alterações
+## 7️⃣ Salvar alterações
 
 ```bash
 git commit -m "Descrição da alteração"
@@ -118,69 +132,15 @@ Exemplo:
 git commit -m "Criada seção de veículos antigos"
 ```
 
-O commit funciona como um “salvamento” do progresso.
-
 ---
 
-## 9️⃣ Enviar alterações para o GitHub
+## 8️⃣ Enviar alterações para o GitHub
 
 ```bash
-git push origin nome-da-branch
+git push origin front-Aguiar
 ```
 
-Exemplo:
-
-```bash
-git push origin frontend-matheus
-```
-
----
-
-# 🔥 Pull Request (PR)
-
-Depois de terminar sua parte, deve ser criado um Pull Request no GitHub.
-
-O Pull Request serve para:
-
-* revisar alterações;
-* verificar erros;
-* aprovar o código;
-* juntar a branch com a `main`.
-
-Exemplo:
-
-```text
-frontend-matheus → main
-```
-
----
-
-# 🔀 Merge
-
-O Merge acontece quando o Pull Request é aprovado.
-
-Ele junta:
-
-```text
-Sua branch + main
-```
-
-Resultado:
-
-```text
-main atualizada
-```
-
----
-
-# ⚠️ Conflitos
-
-Caso duas pessoas alterem a mesma linha de código, o Git pode gerar conflito.
-
-Será necessário escolher:
-
-* qual código manter;
-* ou juntar os dois manualmente.
+Isso envia seu projeto atualizado para sua branch no GitHub.
 
 ---
 
@@ -188,20 +148,20 @@ Será necessário escolher:
 
 * Não trabalhar diretamente na `main`;
 * Cada integrante deve usar sua própria branch;
-* Sempre usar `git pull` antes de começar;
+* Sempre atualizar antes de começar;
 * Fazer commits com descrições claras;
 * Testar antes de enviar alterações.
 
 ---
 
-# 🚀 Resumo do Fluxo
+# 📌 Resumo do Fluxo Diário
 
 ```text
-Clonar projeto
+Entrar no projeto
+      ↓
+Checkout da sua branch
       ↓
 Git Pull
-      ↓
-Criar branch
       ↓
 Fazer alterações
       ↓
@@ -210,11 +170,17 @@ Git Add
 Git Commit
       ↓
 Git Push
-      ↓
-Pull Request
-      ↓
-Merge na main
 ```
 
-```
+Fluxo resumido:
+
+```bash
+git checkout front-Aguiar
+git pull origin front-Aguiar
+
+# desenvolver...
+
+git add .
+git commit -m "Descrição da alteração"
+git push origin front-Aguiar
 ```
