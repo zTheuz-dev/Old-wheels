@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .gallery-hero{
 padding-bottom: 4rem;
 }
@@ -178,3 +179,46 @@ grid-template-columns: repeat(3, 1fr);
 grid-template-columns: repeat(3, 1fr);
 }
 }
+=======
+/* HEADER */
+
+.header{
+    background:#111;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+}
+
+.logo h1{
+    font-size:2rem;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.menu a:hover{
+    color:#c9a14a;
+}
+/* FOOTER */
+
+.footer{
+    background:#111;
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+>>>>>>> origin/main
