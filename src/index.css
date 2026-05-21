@@ -42,9 +42,13 @@ a{
     text-decoration: none;
 }
 
-img{
-    max-width: 100%;
-    display: block;
+.hero-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 1.4rem;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container{
