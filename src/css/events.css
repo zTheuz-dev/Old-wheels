@@ -1,0 +1,186 @@
+.event-hero{
+padding-bottom: 4rem;
+}
+
+.event-card{
+min-height: 25rem;
+}
+
+.event-preview{
+position: relative;
+height: 15rem;
+margin-top: 1.6rem;
+display: grid;
+place-items: center;
+overflow: hidden;
+border-radius: 1.2rem;
+border: 1px solid rgba(255,255,255,0.05);
+background:
+radial-gradient(circle at 50% 30%, rgba(255,212,59,0.13), transparent 35%),
+linear-gradient(180deg, #131720, #0c0f13);
+}
+
+.event-spotlight{
+position: absolute;
+top: -2rem;
+width: 70%;
+height: 8rem;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(255,212,59,0.28), transparent 70%);
+filter: blur(10px);
+}
+
+.event-floor{
+position: absolute;
+left: 0;
+right: 0;
+bottom: 1.5rem;
+height: 2px;
+background: linear-gradient(90deg, transparent, rgba(255,212,59,0.35), transparent);
+}
+
+.event-car{
+position: relative;
+width: min(100%, 24rem);
+height: 9.5rem;
+}
+
+.event-car-glow{
+position: absolute;
+left: 10%;
+right: 10%;
+bottom: 0;
+height: 3.5rem;
+border-radius: 50%;
+background: radial-gradient(circle, rgba(255,212,59,0.28), transparent 70%);
+filter: blur(12px);
+}
+
+.event-car-body{
+position: absolute;
+left: 1rem;
+right: 1rem;
+top: 3rem;
+height: 2.35rem;
+border-radius: 1.1rem 1.1rem 0.8rem 0.8rem;
+background: linear-gradient(135deg, #4a401f, #241f10);
+border: 1px solid rgba(255,255,255,0.08);
+}
+
+.event-car-top{
+position: absolute;
+left: 4.2rem;
+top: 1.3rem;
+width: 7.8rem;
+height: 1.55rem;
+border-radius: 0.8rem 0.8rem 0.3rem 0.3rem;
+background: linear-gradient(135deg, #66571f, #302911);
+border: 1px solid rgba(255,255,255,0.08);
+}
+
+.event-car-window{
+position: absolute;
+left: 4.75rem;
+top: 1.48rem;
+width: 6.7rem;
+height: 1.05rem;
+border-radius: 0.45rem;
+background: linear-gradient(135deg, rgba(255, 240, 168, 0.34), rgba(255,255,255,0.08));
+}
+
+.event-car-line{
+position: absolute;
+left: 2.15rem;
+right: 2.15rem;
+top: 4.38rem;
+height: 0.08rem;
+background: rgba(255,255,255,0.12);
+}
+
+.event-wheel{
+position: absolute;
+bottom: 0.18rem;
+width: 2rem;
+height: 2rem;
+border-radius: 50%;
+background: #0e0b0a;
+border: 0.3rem solid #5a473f;
+box-shadow: inset 0 0 0 0.22rem #17100d;
+animation: spin 7s linear infinite;
+}
+
+.event-wheel::after{
+content: "";
+position: absolute;
+inset: 35%;
+border-radius: 50%;
+background: #9b877a;
+}
+
+.event-wheel-left{
+left: 3rem;
+}
+
+.event-wheel-right{
+right: 3rem;
+}
+
+.experience-grid{
+display: grid;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+
+.experience-card{
+padding: 1.4rem;
+border-radius: var(--radius);
+border: 1px solid var(--border);
+background:
+linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+linear-gradient(180deg, #161b22, #11151b);
+box-shadow: var(--shadow);
+transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.experience-card:hover,
+.experience-card:focus-visible{
+transform: translateY(-4px);
+border-color: rgba(255,212,59,0.35);
+}
+
+.experience-card h3{
+font-size: 1.15rem;
+color: #ffe36e;
+}
+
+.experience-card p{
+margin-top: 0.75rem;
+color: var(--muted);
+}
+
+.schedule-item{
+border: 1px solid var(--border);
+background:
+linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+linear-gradient(180deg, #161b22, #11151b);
+}
+
+.schedule-item:hover{
+border-color: rgba(255,212,59,0.28);
+}
+
+@media (min-width: 48rem){
+.experience-grid{
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.event-preview{
+height: 16rem;
+}
+}
+
+@media (min-width: 64rem){
+.event-card{
+min-height: 26rem;
+}
+}
