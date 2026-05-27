@@ -2,14 +2,14 @@
 .footer{
     border-top: 1px solid var(--border);
     background: #0d1014;
-    padding: 1.5rem 0 2rem;
+    padding: 4rem 0 2rem;
 }
 
 .footer-content{
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     color: var(--muted);
 }
