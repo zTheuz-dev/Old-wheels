@@ -43,12 +43,18 @@ a{
 }
 
 .hero-image {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 1.4rem;
-    margin-top: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 160px;
+    border-radius: 1rem;
+  }
 }
 
 .container{
